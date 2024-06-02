@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Social Media</title>
+        <style>
+                body {
+                        margin: 0;
+                        font-family: Arial, sans-serif;
+                        position: relative;
+                }
+                .wrapper {
+                        background-color: #f0f0f0; /* kolor szarego tła */
+                        min-height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+                .container, .form-container {
+                        background-color: rgba(255, 255, 255, 0.9);
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                        animation: fadeIn 1s ease;
+                        animation-fill-mode: both;
+                        width: 80%;
+                        max-width: 1200px;
+                        margin-bottom: 20px;
+                }
+                @keyframes fadeIn {
+                        0% {
+                                opacity: 0;
+                        }
+                        100% {
+                                opacity: 1;
+                        }
+                }
+                .container h1, .form-container h2 {
+                        margin-bottom: 20px;
+                        color: #333;
+                }
+                .social-links {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 20px;
+                }
+                .social-links a {
+                        display: inline-block;
+                        margin: 10px;
+                        text-decoration: none;
+                        color: #333;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        background-color: rgba(255, 255, 255, 0.8);
+                        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+                }
+                .social-links a:hover {
+                        transform: scale(1.1);
+                        background-color: rgba(255, 255, 255, 0.9);
+                }
+                .social-links a.facebook { background-color: #4682B4; color: #fff; }
+                .social-links a.twitter { background-color: #1da1f2; color: #fff; }
+                .social-links a.instagram { background-color: #e4405f; color: #fff; }
+                .social-links a.linkedin { background-color: #DB7093; color: #fff; }
+                .social-links a.youtube { background-color: #ff0000; color: #fff; }
+                .footer {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        background-color: #000;
+                        color: #fff;
+                        padding: 10px 0;
+                        text-align: center;
+                }
+                .requirements {
+                        text-align: left;
+                        margin-bottom: 20px;
+                }
+                .requirements ul {
+                        padding-left: 20px;
+                }
+                .requirements ul li {
+                        margin-bottom: 10px;
+                }
+                .info {
+                        margin-bottom: 20px;
+                        color: #333;
+                }
+                .form-columns {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                }
+                .form-column {
+                        width: 48%;
+                        box-sizing: border-box;
+                }
+                .contact-form {
+                        text-align: left;
+                }
+                .contact-form label {
+                        display: block;
+                        margin-bottom: 5px;
+                        color: #333;
+                }
+                .contact-form input,
+                .contact-form textarea {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                }
+                .contact-form input[type="submit"] {
+                        background-color: #333;
+                        color: #fff;
+                        cursor: pointer;
+                        width: 100%;
+                }
+                .contact-form input[type="submit"]:hover {
+                        background-color: #555;
+                }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <script type="text/javascript">
+                (function(){
+                        emailjs.init("YOUR_USER_ID"); // Zamień YOUR_USER_ID na swój użytkownik ID z EmailJS
+                })();
+
+                function sendEmail(e) {
+                        e.preventDefault();
+
+                        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target)
+                                .then((result) => {
+                                        alert('Wiadomość została wysłana pomyślnie!');
+                                }, (error) => {
+                                        alert('Wystąpił błąd podczas wysyłania wiadomości.');
+                                });
+                }
+        </script>
+</head>
+<body>
+        <div class="wrapper">
+                <div class="container">
+                        <h1>Moje Social Media</h1>
+                        <div class="social-links">
+                                <a href="https://discord.gg/SmcnmdEkze" class="facebook" target="_blank">Discord</a>
+                                <a href="https://x.com/KrzysiuLive" class="twitter" target="_blank">Twitter</a>
+                                <a href="https://www.instagram.com/krzysiox222/" class="instagram" target="_blank">Instagram</a>
+                                <a href="https://www.tiktok.com/@krzysiox222" class="linkedin" target="_blank">TikTok</a>
+                                <a href="https://www.youtube.com/channel/UCi5U8at3nlAefVH3R2zLhEQ" class="youtube" target="_blank">YouTube</a>
+                        </div>
+                </div>
+                <div class="form-container">
+                        <h2>Rekrutacja Do Administracji Discorda KrzysiuSquad</h2>
+                        <div class="requirements">
+                                <h3>Wymagania:</h3>
+                                <ul>
+                                        <li>Wiek: 13+</li>
+                                        <li>Posiadanie Mikrofonu na tyle dobrego aby dało się wszystko zrozumieć oraz sprawny Internet</li>
+                                        <li>Wolny czas w trakcie dnia</li>
+                                        <li>Podstawowa umiejętność korzystania z Discorda</li>
+                                        <li>Znajomość Kontentu aktualnego prowadzonego na Kanale YouTube Oraz Twitch "KrzysiuLive"</li>
+
+                                </ul>
+                        </div>
+                        <div
+<p>Osoby które przejdą etap pierwszy dostaną wiadomość prywatną na discordzie.</p>
+                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSehOxtT1OsKkZq9HuFXVqZpr-hsrBZVw8euv3Lt-jSgDj3baw/viewform" class="facebook" target="_blank">Rekrutacja</a>
+    </div>
+    </div>
+    <div class="footer">&copy; 2024 KrzysiuSquad - Wszelkie prawa zastrzeżone</div>
+</body>
+</html>
